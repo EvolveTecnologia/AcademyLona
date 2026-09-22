@@ -5,6 +5,7 @@ interface LogoProps {
   variant?: 'horizontal' | 'stacked' | 'icon-only';
   inverted?: boolean; // For dark backgrounds (white logo) or light backgrounds (color logo)
   size?: 'sm' | 'md' | 'lg' | 'xl';
+  onClick?: () => void;
 }
 
 export const Logo: React.FC<LogoProps> = ({
@@ -12,6 +13,7 @@ export const Logo: React.FC<LogoProps> = ({
   variant = 'horizontal',
   inverted = false,
   size,
+  onClick,
 }) => {
   if (variant === 'icon-only') {
     return (
@@ -20,6 +22,7 @@ export const Logo: React.FC<LogoProps> = ({
         alt="Academy Lona - Fondation Lona" 
         className={`object-contain select-none shrink-0 ${className || 'w-10 h-10 rounded-xl'}`}
         loading="eager"
+        onClick={onClick}
         onError={(e) => {
           (e.target as HTMLImageElement).src = '/apple-touch-icon.png';
         }}
@@ -34,6 +37,7 @@ export const Logo: React.FC<LogoProps> = ({
         alt="Academy Lona - Fondation Lona" 
         className={`w-48 max-w-full h-auto object-contain select-none filter drop-shadow-md ${className}`}
         loading="eager"
+        onClick={onClick}
         onError={(e) => {
           (e.target as HTMLImageElement).src = '/pwa-512x512.png';
         }}
@@ -60,6 +64,7 @@ export const Logo: React.FC<LogoProps> = ({
       alt="Academy Lona - Fondation Lona" 
       className={`w-auto object-contain select-none shrink-0 transition-all ${className ? className : sizeClass}`}
       loading="eager"
+      onClick={onClick}
       onError={(e) => {
         (e.target as HTMLImageElement).src = '/logolona-png.png';
       }}

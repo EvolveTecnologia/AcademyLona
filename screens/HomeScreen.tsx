@@ -141,12 +141,6 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
 
   return (
     <div className="text-white pb-24 md:pb-16 select-none animate-in fade-in duration-500 overflow-x-hidden bg-[#0F172A]">
-      {/* Mobile Top Header */}
-      <div className="md:hidden flex items-center justify-between px-4 py-2.5 bg-[#0F172A]/90 backdrop-blur-md sticky top-0 z-40 border-b border-[#183D73]/40">
-        <Logo inverted className="h-7" />
-        <div className="w-2 h-2 rounded-full bg-[#E8B84B] animate-pulse" />
-      </div>
-      
       {/* Hero Banner Carousel (Disney+ Style) */}
       <div 
         className="relative h-[65vh] sm:h-[70vh] md:h-[75vh] w-full overflow-hidden group cursor-pointer mb-6"

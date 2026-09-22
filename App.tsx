@@ -72,7 +72,7 @@ const App: React.FC = () => {
     const handleResize = () => {
       const width = window.innerWidth;
       const height = window.innerHeight;
-      const mobileBreakpoint = 768; 
+      const mobileBreakpoint = 1024; // Mobile & Tablet
       const mobileStatus = width < mobileBreakpoint;
       setIsMobile(mobileStatus);
       setIsLandscape(width > height);
