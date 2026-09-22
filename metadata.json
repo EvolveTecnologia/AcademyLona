@@ -1,0 +1,11 @@
+{
+  "name": "Academy Lona",
+  "description": "Plateforme éducative officielle de la Fondation Lona dédiée à la formation, au développement des compétences et à l'autonomisation des jeunes et des femmes en République Démocratique du Congo. Streaming vidéo adaptatif, programme EXCELLENTIA, santé & prévention, entrepreneuriat et éducation civique.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

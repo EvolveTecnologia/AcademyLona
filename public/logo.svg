@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 320" width="100%" height="100%">
+  <defs>
+    <!-- Royal Blue Gradient -->
+    <linearGradient id="lonaBlueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#245398" />
+      <stop offset="60%" stop-color="#183D73" />
+      <stop offset="100%" stop-color="#102B52" />
+    </linearGradient>
+
+    <!-- Warm Gold Gradient -->
+    <linearGradient id="lonaGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE082" />
+      <stop offset="50%" stop-color="#E8B84B" />
+      <stop offset="100%" stop-color="#D4A338" />
+    </linearGradient>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(10, 0)">
+    <!-- Fondation Lona Emblem: Educational Laurel & Star of Excellence -->
+    <g transform="translate(250, 105)" filter="url(#softShadow)">
+      <!-- Outer Shield / Circle -->
+      <circle cx="0" cy="0" r="68" fill="url(#lonaBlueGrad)" stroke="url(#lonaGoldGrad)" stroke-width="4" />
+      
+      <!-- Central Golden Star (DRC Hope & Excellence) -->
+      <polygon points="0,-42 12,-12 42,-12 18,8 27,38 0,20 -27,38 -18,8 -42,-12 -12,-12" fill="url(#lonaGoldGrad)" />
+      
+      <!-- Book of Knowledge & Learning base -->
+      <path d="M -24 32 C -10 26, 0 28, 0 34 C 0 28, 10 26, 24 32 L 20 42 C 8 36, 0 38, 0 42 C 0 38, -8 36, -20 42 Z" fill="#FFFFFF" opacity="0.95" />
+    </g>
+
+    <!-- Typography: ACADEMY LONA -->
+    <g transform="translate(250, 235)" text-anchor="middle" font-family="'Montserrat', 'Plus Jakarta Sans', system-ui, sans-serif">
+      <text x="0" y="0" fill="#183D73" font-size="34" font-weight="900" letter-spacing="3px">ACADEMY</text>
+      <text x="0" y="32" fill="#E8B84B" font-size="30" font-weight="800" letter-spacing="4px">LONA</text>
+      <text x="0" y="54" fill="#64748B" font-size="11" font-weight="700" letter-spacing="2px">FONDATION LONA • RDC</text>
+    </g>
+  </g>
+</svg>
