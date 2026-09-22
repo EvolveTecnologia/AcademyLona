@@ -34,7 +34,7 @@ const DownloadsScreen: React.FC<DownloadsScreenProps> = ({ downloadedIds, onRemo
   };
 
   return (
-    <div className="min-h-screen bg-[#122C34] text-white px-6 md:px-16 pt-12 md:pt-16 pb-24 flex flex-col animate-in fade-in duration-500">
+    <div className="min-h-screen bg-[#0F172A] text-white px-6 md:px-16 pt-12 md:pt-16 pb-24 flex flex-col animate-in fade-in duration-500">
       
       {/* Header */}
       <div className="flex justify-between items-end mb-10 border-b border-white/10 pb-6">
@@ -47,7 +47,7 @@ const DownloadsScreen: React.FC<DownloadsScreenProps> = ({ downloadedIds, onRemo
             <div className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Espace utilisé</div>
             <div className="flex items-center gap-2">
               <div className="w-28 h-1.5 bg-gray-700 rounded-full overflow-hidden">
-                <div className="h-full bg-[#0A7A94] w-[18%]" />
+                <div className="h-full bg-[#E8B84B] w-[18%]" />
               </div>
               <span className="text-xs font-bold text-white">420 Mo / 32 Go</span>
             </div>
@@ -69,11 +69,11 @@ const DownloadsScreen: React.FC<DownloadsScreenProps> = ({ downloadedIds, onRemo
               {downloadedMaterials.map(({ material, courseTitle }) => (
                 <div 
                   key={material.id}
-                  className="group relative bg-[#1A2B32] border border-white/10 hover:border-[#0A7A94] rounded-2xl p-5 flex flex-col justify-between hover:bg-[#1A2B32]/80 transition-all cursor-pointer h-48"
+                  className="group relative bg-[#1E293B] border border-white/10 hover:border-[#E8B84B]/50 rounded-2xl p-5 flex flex-col justify-between hover:bg-[#183D73]/30 transition-all cursor-pointer h-48 shadow-lg"
                   onClick={() => onMaterialClick(material)}
                 >
                   <div className="flex justify-between items-start">
-                    <div className="w-11 h-11 bg-[#0A7A94]/20 text-[#0E98A8] rounded-xl flex items-center justify-center">
+                    <div className="w-11 h-11 bg-[#183D73] text-[#E8B84B] rounded-xl flex items-center justify-center border border-[#E8B84B]/20">
                       <FileText size={22} />
                     </div>
                     <button 
@@ -102,7 +102,7 @@ const DownloadsScreen: React.FC<DownloadsScreenProps> = ({ downloadedIds, onRemo
         ) : (
           <div className="flex flex-col items-center justify-center h-[55vh] text-center">
             <div className="w-24 h-24 bg-white/5 rounded-3xl flex items-center justify-center mb-6 border border-white/10">
-              <Download size={36} className="text-gray-400" />
+              <Download size={36} className="text-[#E8B84B]" />
             </div>
             <h3 className="text-lg font-bold text-white mb-2 uppercase tracking-wide">Votre espace hors-ligne est vide</h3>
             <p className="text-xs text-gray-300 max-w-sm leading-relaxed mb-6">
@@ -115,7 +115,7 @@ const DownloadsScreen: React.FC<DownloadsScreenProps> = ({ downloadedIds, onRemo
       {/* Delete Modal */}
       {deleteId && (
         <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-md flex items-center justify-center p-6 animate-in fade-in duration-300">
-          <div className="bg-[#1A2B32] border border-white/10 rounded-3xl p-8 w-full max-w-sm text-center space-y-6 shadow-2xl">
+          <div className="bg-[#1E293B] border border-white/10 rounded-3xl p-8 w-full max-w-sm text-center space-y-6 shadow-2xl">
             <div className="w-16 h-16 bg-red-500/15 text-red-400 rounded-full flex items-center justify-center mx-auto border border-red-500/20">
               <AlertCircle size={32} />
             </div>

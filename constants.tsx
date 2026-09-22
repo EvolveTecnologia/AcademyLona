@@ -305,254 +305,491 @@ const DROITS_HUMAINS_COURSES: Course[] = [
   }
 ];
 
-// --- 📚 5. EDUCAÇÃO ---
+// --- 📚 5. ÉDUCATION & QUALIFICATION ---
 const EDUCACAO_COURSES: Course[] = [
   {
-    id: 'metodologias-ativas-pedagogia-digital',
-    title: 'Metodologias Ativas de Ensino & Pedagogia Digital',
+    id: 'formation-continue-francais-maths',
+    title: 'Formation Continue - Français Professionnel & Mathématiques Pratiques',
     category: Category.Educacao,
-    description: 'Transformação das práticas pedagógicas através do ensino híbrido, sala de aula invertida, gamificação e recursos educacionais digitais abertos.',
-    instructor: 'Dra. Camila Vasconcelos • Especialista em Tecnologia Educacional',
+    description: 'Renforcement des compétences fondamentales : communication écrite et orale en contexte de travail, calculs commerciaux, pourcentages et raisonnement logique appliqué.',
+    instructor: 'Prof. Jean-Marc Boucher • Académie Pédagogique',
     thumbnail: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=1200&auto=format&fit=crop',
     progress: 35,
     duration: '60h',
     modulesCount: 3,
     materials: [
-      { id: 'mat-edu-1', title: 'Guia de Metodologias Ativas no Ensino Contemporâneo', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
+      { id: 'mat-edu-1', title: 'Guide de Formation Continue : Français & Mathématiques Pratiques', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
     ],
     quiz: [
-      { id: 1, question: "O que caracteriza a metodologia da Sala de Aula Invertida (Flipped Classroom)?", options: ["O aluno estuda o conteúdo teórico previamente em casa e utiliza o tempo em sala para práticas e debates", "Inverter as carteiras na sala de aula", "Apenas aplicar provas surpresa", "Substituir totalmente o professor por computadores"], correctAnswer: 0 }
+      { id: 1, question: "Comment rédiger une note de service formelle et concise ?", options: ["En précisant directement l'objet, les faits clés et les actions attendues", "Sans mentionner de date ni d'émetteur", "Uniquement par un message oral informel", "En rédigeant un texte de dix pages sans paragraphe"], correctAnswer: 0 }
     ],
     modules: [
       {
-        title: 'Módulo 1: Fundamentos da Pedagogia Ativa',
+        title: 'Module 1 : Maîtrise de la Communication Écrite en Entreprise',
         lessons: [
-          { id: 'edu-1', title: 'Transição do Ensino Tradicional para o Ensino Centrado no Estudante', duration: '25 min', completed: true, videoUrl: STEM_VIDEO_1 },
-          { id: 'edu-2', title: 'Ferramentas Digitais e Plataformas Colaborativas', duration: '30 min', completed: false, videoUrl: STEM_VIDEO_1 }
+          { id: 'edu-1', title: 'Rédaction d\'E-mails Professionnels et Comptes-Rendus', duration: '25 min', completed: true, videoUrl: STEM_VIDEO_1 },
+          { id: 'edu-2', title: 'Calculs Commerciaux et Pourcentages Appliqués', duration: '30 min', completed: false, videoUrl: STEM_VIDEO_1 }
         ]
       }
     ]
   },
   {
-    id: 'praticas-pedagogicas-inclusao',
-    title: 'Práticas Pedagógicas Inclusivas & Acessibilidade Escolar',
+    id: 'mathematiques-appliquees-industrie',
+    title: 'Mathématiques Appliquées à l\'Industrie et à la Logistique',
     category: Category.Educacao,
-    description: 'Estratégias para adaptação curricular, acolhimento da neurodiversidade, desenho universal para aprendizagem (DUA) e equidade educacional.',
-    instructor: 'Prof. Marcus Vinicius • Mestre em Educação Especial',
+    description: 'Statistiques opérationnelles, calculs métriques, gestion des stocks, optimisation des flux industriels et résolutions graphiques.',
+    instructor: 'Ing. Patrice Kalala • Consultant Industriel',
+    thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop',
+    progress: 20,
+    duration: '50h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Calculs de Rendement et Flux Logistiques',
+        lessons: [
+          { id: 'mat-ind-1', title: 'Gestion Quantitative des Stocks et Délais de Réapprovisionnement', duration: '28 min', completed: true, videoUrl: STEM_VIDEO_1 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'communication-ethique-entreprise',
+    title: 'Communication Professionnelle et Éthique en Entreprise',
+    category: Category.Educacao,
+    description: 'Déontologie, culture de service client, prise de parole en équipe, résolution des conflits interpersonnels et posture de travail exemplaire.',
+    instructor: 'Dre Clémence Ntumba • Psychologue du Travail',
     thumbnail: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop',
-    progress: 0,
+    progress: 10,
     duration: '45h',
     modulesCount: 2,
     modules: [
       {
-        title: 'Módulo 1: Desenho Universal para a Aprendizagem',
+        title: 'Module 1 : Déontologie et Climat d\'Équipe Positif',
         lessons: [
-          { id: 'inc-1', title: 'Princípios do DUA no Planejamento de Aulas', duration: '22 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
-        ]
-      }
-    ]
-  }
-];
-
-// --- 💻 6. TECNOLOGIA ---
-const TECNOLOGIA_COURSES: Course[] = [
-  {
-    id: 'fundamentos-programacao-web',
-    title: 'Fundamentos de Programação, Algoritmos & Desenvolvimento Web',
-    category: Category.Tecnologia,
-    description: 'Lógica de programação essencial, estruturas de dados, HTML5, CSS3, JavaScript moderno e desenvolvimento de aplicações web completas.',
-    instructor: 'Lucas Ferreira • Tech Lead & Desenvolvedor Fullstack',
-    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
-    progress: 50,
-    duration: '90h',
-    modulesCount: 4,
-    materials: [
-      { id: 'mat-tec-1', title: 'Manual Prático de JavaScript Moderno e Git', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
-    ],
-    quiz: [
-      { id: 1, question: "Qual estrutura de dados opera no princípio FIFO (First In, First Out)?", options: ["Fila (Queue)", "Pilha (Stack)", "Árvore Binária", "Tabela Hash"], correctAnswer: 0 }
-    ],
-    modules: [
-      {
-        title: 'Módulo 1: Lógica e Estrutura de Código',
-        lessons: [
-          { id: 'tec-1', title: 'Variáveis, Condicionais e Laços de Repetição', duration: '28 min', completed: true, videoUrl: STEM_VIDEO_3 },
-          { id: 'tec-2', title: 'Funções de Primeira Classe e Manipulação do DOM', duration: '32 min', completed: true, videoUrl: STEM_VIDEO_3 }
+          { id: 'inc-1', title: 'Principes d\'Éthique et Prise de Parole Assertive', duration: '22 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
         ]
       }
     ]
   },
   {
-    id: 'inteligencia-artificial-python',
-    title: 'Inteligência Artificial Aplicada & Análise de Dados com Python',
-    category: Category.Tecnologia,
-    description: 'Machine learning, processamento de dados com Pandas e NumPy, modelos preditivos e introdução aos grandes modelos de linguagem (LLMs).',
-    instructor: 'Renata Albuquerque, Ph.D. • Cientista de Dados',
-    thumbnail: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop',
-    progress: 10,
-    duration: '85h',
-    modulesCount: 3,
-    modules: [
-      {
-        title: 'Módulo 1: Preparação e Análise Exploratória de Dados',
-        lessons: [
-          { id: 'ai-1', title: 'Pipeline de Dados com Python e Pandas', duration: '35 min', completed: true, videoUrl: STEM_VIDEO_3 },
-          { id: 'ai-2', title: 'Treinando seu Primeiro Modelo Supervisionado', duration: '40 min', completed: false, videoUrl: STEM_VIDEO_3 }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'seguranca-dados-nuvem',
-    title: 'Segurança da Informação, Redes & Computação em Nuvem',
-    category: Category.Tecnologia,
-    description: 'Arquitetura em nuvem (AWS/GCP), criptografia, autenticação segura, práticas de DevOps e governança de segurança de dados.',
-    instructor: 'Eduardo Silveira • Arquiteto Cloud & Cyber Security',
-    thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
-    progress: 0,
-    duration: '70h',
-    modulesCount: 3,
-    modules: [
-      {
-        title: 'Módulo 1: Fundamentos de Arquitetura em Nuvem',
-        lessons: [
-          { id: 'cld-1', title: 'Serviços de Nuvem, Redes Privadas e Firewalls', duration: '27 min', completed: false, videoUrl: STEM_VIDEO_2 }
-        ]
-      }
-    ]
-  }
-];
-
-// --- 🌿 7. SUSTENTABILIDADE ---
-const SUSTENTABILIDADE_COURSES: Course[] = [
-  {
-    id: 'gestao-ambiental-energias-renovaveis',
-    title: 'Gestão Ambiental, Energias Renováveis & Práticas Sustentáveis',
-    category: Category.Sustentabilidade,
-    description: 'Transição energética, matriz solar e eólica, ESG no mundo corporativo, crédito de carbono e conformidade com metas de desenvolvimento sustentável.',
-    instructor: 'Mariana Duarte • Engenheira Ambiental e Especialista ESG',
-    thumbnail: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop',
-    progress: 20,
-    duration: '50h',
-    modulesCount: 3,
-    materials: [
-      { id: 'mat-sus-1', title: 'Guia Prático de Implantação de Práticas ESG', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: false }
-    ],
-    modules: [
-      {
-        title: 'Módulo 1: Transição Energética',
-        lessons: [
-          { id: 'sus-1', title: 'Energias Limpas e Viabilidade Econômica', duration: '26 min', completed: true, videoUrl: STEM_VIDEO_2 },
-          { id: 'sus-2', title: 'Gestão de Resíduos e Economia Circular', duration: '30 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'agroecologia-sustentabilidade',
-    title: 'Agroecologia, Recursos Hídricos e Preservação Florestal',
-    category: Category.Sustentabilidade,
-    description: 'Sistemas agroflorestais, manejo sustentável do solo, preservação de bacias hidrográficas e recuperação de áreas degradadas.',
-    instructor: 'João Pedro Mendonça • Engenheiro Agrônomo',
-    thumbnail: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop',
+    id: 'lecture-documents-techniques-normes',
+    title: 'Lecture et Interprétation de Documents Techniques & Normes',
+    category: Category.Educacao,
+    description: 'Schémas techniques, notices de sécurité, manuels d\'utilisation d\'équipements et protocoles industriels standards.',
+    instructor: 'Ing. Christian Mulamba • Expert Qualité & Process',
+    thumbnail: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop',
     progress: 0,
     duration: '40h',
     modulesCount: 2,
     modules: [
       {
-        title: 'Módulo 1: Princípios da Agroecologia',
+        title: 'Module 1 : Compréhension des Schémas Techniques',
         lessons: [
-          { id: 'agr-1', title: 'Sistemas Produtivos Regenerativos', duration: '24 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+          { id: 'doc-1', title: 'Symboles Standards et Plans de Montage', duration: '24 min', completed: false, videoUrl: STEM_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'redaction-strategique-argumentative',
+    title: 'Maîtrise de la Rédaction Stratégique et Argumentative',
+    category: Category.Educacao,
+    description: 'Rapports d\'activité, correspondances officielles, notes de synthèse et argumentaires persuasifs pour décideurs.',
+    instructor: 'Me Astrid Mwamba • Experte Rédactionnelle',
+    thumbnail: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '45h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Argumentation d\'Impact et Synthèse',
+        lessons: [
+          { id: 'red-strat-1', title: 'Structure Logique d\'une Note de Synthèse', duration: '26 min', completed: false, videoUrl: STEM_VIDEO_1 }
         ]
       }
     ]
   }
 ];
 
-// --- 📈 8. GESTÃO ---
+// --- 💻 6. TECHNOLOGIE & INNOVATION DIGITALE ---
+const TECNOLOGIA_COURSES: Course[] = [
+  {
+    id: 'informatique-professionnelle-cloud',
+    title: 'Informatique Professionnelle & Outils Collaboratifs Cloud',
+    category: Category.Tecnologia,
+    description: 'Suite bureautique moderne, travail collaboratif en ligne, stockage cloud sécurisé, automatisation documentaire et productivité numérique.',
+    instructor: 'David Mbayo • Spécialiste Cloud & Productivité',
+    thumbnail: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
+    progress: 50,
+    duration: '70h',
+    modulesCount: 3,
+    materials: [
+      { id: 'mat-tec-1', title: 'Guide Pratique du Travail Collaboratif Cloud', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
+    ],
+    quiz: [
+      { id: 1, question: "Quel est le principe d'une sauvegarde cloud 3-2-1 ?", options: ["3 copies de vos données, sur 2 supports différents, dont 1 hors site", "Faire 3 copies sur une seule clé USB", "Sauvegarder une fois tous les 3 ans", "Supprimer les anciennes données chaque mois"], correctAnswer: 0 }
+    ],
+    modules: [
+      {
+        title: 'Module 1 : Outils Collaboratifs et Sécurité Quotidienne',
+        lessons: [
+          { id: 'tec-1', title: 'Gestion Sécurisée des Documents Cloud et Droits d\'Accès', duration: '28 min', completed: true, videoUrl: STEM_VIDEO_3 },
+          { id: 'tec-2', title: 'Automatisation des Tâches Bureautiques Courantes', duration: '32 min', completed: true, videoUrl: STEM_VIDEO_3 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'industrie-40-iot',
+    title: 'Industrie 4.0, Automatisation & Objets Connectés (IoT)',
+    category: Category.Tecnologia,
+    description: 'Capteurs intelligents, protocoles de communication industrielle, maintenance prédictive et intégration de l\'IoT en usine.',
+    instructor: 'Ing. Marc Tshimanga • Spécialiste Automatismes',
+    thumbnail: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop',
+    progress: 15,
+    duration: '75h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Introduction aux Systèmes Connectés',
+        lessons: [
+          { id: 'iot-1', title: 'Réseaux de Capteurs Industriels et Passerelles IoT', duration: '30 min', completed: true, videoUrl: STEM_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'supervision-scada',
+    title: 'Supervision Industrielle et Systèmes SCADA',
+    category: Category.Tecnologia,
+    description: 'Architecture SCADA, automates programmables (API), supervision en temps réel et contrôle des processus énergétiques et miniers.',
+    instructor: 'Ing. Blaise Kibwe • Consultant Énergie & Mines',
+    thumbnail: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '80h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Fondements des Réseaux SCADA',
+        lessons: [
+          { id: 'scada-1', title: 'Interfaces Homme-Machine (IHM) et Télégestion en RDC', duration: '35 min', completed: false, videoUrl: STEM_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'cybersecurite-protection-actifs',
+    title: 'Cybersécurité & Protection des Actifs Numériques',
+    category: Category.Tecnologia,
+    description: 'Hygiène informatique, protection contre le phishing, sécurisation des terminaux mobiles, sauvegardes chiffrées et conformité RGPD/RDC.',
+    instructor: 'Arlette Kabeya • Experte en Cybersécurité',
+    thumbnail: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '65h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Hygiène et Résilience Numérique',
+        lessons: [
+          { id: 'cld-1', title: 'Authentification Forte, Gestion des Mots de Passe et Menaces Actuelles', duration: '27 min', completed: false, videoUrl: STEM_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'algorithmique-developpement-logiciel',
+    title: 'Algorithmique & Initiation au Développement Logiciel',
+    category: Category.Tecnologia,
+    description: 'Logique de programmation moderne, structures conditionnelles, boucles, création d\'applications web interactives avec JavaScript et Python.',
+    instructor: 'Lucas Ferreira & Yannick Tshilumba • Lead Développeurs',
+    thumbnail: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1200&auto=format&fit=crop',
+    progress: 25,
+    duration: '85h',
+    modulesCount: 4,
+    modules: [
+      {
+        title: 'Module 1 : Pensée Algorithmique et Logique',
+        lessons: [
+          { id: 'ai-1', title: 'Variables, Structures de Données et Premiers Programmes', duration: '35 min', completed: true, videoUrl: STEM_VIDEO_3 }
+        ]
+      }
+    ]
+  }
+];
+
+// --- 🌿 7. ENVIRONNEMENT & DURABILITÉ ---
+const SUSTENTABILIDADE_COURSES: Course[] = [
+  {
+    id: 'bassin-congo-vr-360',
+    title: 'Le Bassin du Congo en Réalité Virtuelle 360°',
+    category: Category.Sustentabilidade,
+    description: 'Exploration immersive du deuxième poumon vert mondial : biodiversité, tourbières, cycle de l\'eau et enjeux de conservation communautaire.',
+    instructor: 'Dr. Eric Kasongo • Écologue & Chercheur',
+    thumbnail: 'https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=1200&auto=format&fit=crop',
+    progress: 30,
+    duration: '45h',
+    modulesCount: 2,
+    materials: [
+      { id: 'mat-sus-1', title: 'Atlas Pédagogique du Bassin du Congo et des Tourbières', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
+    ],
+    modules: [
+      {
+        title: 'Module 1 : Richesse Écologique et Climat Mondial',
+        lessons: [
+          { id: 'sus-1', title: 'Le Bassin du Congo : Réservoir de Carbone Planétaire', duration: '26 min', completed: true, videoUrl: STEM_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'gestion-environnementale-rse-industries',
+    title: 'Gestion Environnementale et RSE Appliquée aux Industries',
+    category: Category.Sustentabilidade,
+    description: 'Études d\'impact environnemental, conformité réglementaire, plans de gestion sociale et responsabilité sociétale des entreprises en RDC.',
+    instructor: 'Mariana Duarte • Experte ESG & Environnement',
+    thumbnail: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=80&w=1200&auto=format&fit=crop',
+    progress: 10,
+    duration: '50h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Normes et Pratiques RSE',
+        lessons: [
+          { id: 'agr-1', title: 'Mise en Œuvre d\'un Plan de Gestion Sociale et Environnementale', duration: '28 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'dechets-industriels-economie-circulaire',
+    title: 'Gestion des Déchets Industriels et Économie Circulaire',
+    category: Category.Sustentabilidade,
+    description: 'Tri sélectif, valorisation des matières recyclables, réduction de l\'empreinte carbone et modèles économiques circulaires durables.',
+    instructor: 'Ing. François Bope • Consultant Économie Verte',
+    thumbnail: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '40h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Valorisation et Recyclage',
+        lessons: [
+          { id: 'dech-1', title: 'Filières de Recyclage et Débouchés Économiques Locaux', duration: '25 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'surveillance-eau-climat',
+    title: 'Surveillance Communautaire de l\'Eau et du Climat',
+    category: Category.Sustentabilidade,
+    description: 'Qualité des eaux de surface, préservation des sources, adaptation aux variations climatiques et mobilisation citoyenne.',
+    instructor: 'Thérèse Kanyeba • Hydrobiologiste',
+    thumbnail: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '35h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Analyse et Protection de l\'Eau',
+        lessons: [
+          { id: 'eau-1', title: 'Indicateurs de Pureté de l\'Eau et Filtration Communautaire', duration: '22 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'normes-esg-afrique-centrale',
+    title: 'Normes ESG et Investissement Responsable en Afrique Centrale',
+    category: Category.Sustentabilidade,
+    description: 'Critères environnementaux, sociaux et de gouvernance exigés par les bailleurs internationaux pour les projets d\'infrastructures.',
+    instructor: 'Michel Ndongala • Analyste Finance Durable',
+    thumbnail: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '45h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Cadres ESG Internationaux',
+        lessons: [
+          { id: 'esg-1', title: 'Reporting Extra-Financier et Conformité RDC', duration: '30 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
+        ]
+      }
+    ]
+  }
+];
+
+// --- 📈 8. GESTION, MANAGEMENT & ENTREPRENEURIAT ---
 const GESTAO_COURSES: Course[] = [
   {
-    id: 'gestao-agil-projetos-lideranca',
-    title: 'Gestão Ágil de Projetos, Liderança & Tomada de Decisão',
+    id: 'creation-entreprise-business-model',
+    title: 'Création d\'Entreprise & Business Model Innovant',
     category: Category.Gestao,
-    description: 'Metodologias Scrum e Kanban, gestão de equipes de alta performance, inteligência emocional e resolução de conflitos em ambientes dinâmicos.',
-    instructor: 'Fabio Meireles • Agile Coach e Mentor Executivo',
+    description: 'Du concept au lancement commercial : Business Model Canvas, étude de faisabilité, statuts juridiques OHADA et plan d\'exécution opérationnel.',
+    instructor: 'Fabio Meireles • Mentor Entrepreneuriat & Investissement',
     thumbnail: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop',
     progress: 45,
     duration: '65h',
     modulesCount: 3,
     materials: [
-      { id: 'mat-ges-1', title: 'Framework Ágil: Templates de Sprints e Backlog', type: 'pdf', url: WOMEN_GUIDE_URL, isDownloaded: true }
+      { id: 'mat-ges-1', title: 'Canevas Business Model & Modèle d\'Affaires OHADA', type: 'pdf', url: WOMEN_GUIDE_URL, isDownloaded: true }
     ],
     modules: [
       {
-        title: 'Módulo 1: Frameworks Ágeis na Prática',
+        title: 'Module 1 : Structuration du Projet d\'Entreprise',
         lessons: [
-          { id: 'ges-1', title: 'Planejamento de Sprints e Cerimônias Ágeis', duration: '30 min', completed: true, videoUrl: WOMEN_VIDEO_2 },
-          { id: 'ges-2', title: 'Liderança Servidora e Delegação Eficaz', duration: '28 min', completed: false, videoUrl: WOMEN_VIDEO_2 }
+          { id: 'ges-1', title: 'Conception de la Proposition de Valeur et Segments Clients', duration: '30 min', completed: true, videoUrl: WOMEN_VIDEO_2 }
         ]
       }
     ]
   },
   {
-    id: 'financas-planejamento-estrategico',
-    title: 'Finanças Corporativas, Contabilidade & Orçamento Empresarial',
+    id: 'gestion-financiere-tresorerie-pme',
+    title: 'Gestion Financière et Trésorerie pour TPE & PME',
     category: Category.Gestao,
-    description: 'Fluxo de caixa, demonstrações financeiras (DRE, Balanço), análise de investimentos (VPL, TIR) e planejamento tributário.',
-    instructor: 'Patricia Santos • CFO & Consultora Financeira',
+    description: 'Budget prévisionnel, maîtrise du besoin en fonds de roulement (BFR), tenue des livres de comptes et optimisation de trésorerie.',
+    instructor: 'Patricia Santos • Directrice Financière & Consultante',
     thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop',
-    progress: 0,
+    progress: 10,
     duration: '55h',
     modulesCount: 3,
     modules: [
       {
-        title: 'Módulo 1: Estruturação Financeira Básica',
+        title: 'Module 1 : Rigueur Comptable et Gestion des Flux',
         lessons: [
-          { id: 'fin-1', title: 'Controle de Custos e Projeção de Fluxo de Caixa', duration: '32 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
+          { id: 'fin-1', title: 'Contrôle des Coûts et Prévision de Trésorerie Quotidienne', duration: '32 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'gouvernance-cooperatives-associations',
+    title: 'Gouvernance des Coopératives et Associations Solidaires',
+    category: Category.Gestao,
+    description: 'Gestion démocratique, transparence comptable, fidélisation des membres et conduite de projets à impact communautaire fort.',
+    instructor: 'Me Sylvain Lukusa • Juriste d\'Affaires OHADA',
+    thumbnail: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '40h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Statuts et Rôles des Organes Dirigeants',
+        lessons: [
+          { id: 'coop-1', title: 'Assemblées Générales et Règles de Transparence Financière', duration: '28 min', completed: false, videoUrl: WOMEN_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'acces-marches-publics-grands-comptes',
+    title: 'Accès aux Marchés Publics et Fourniture aux Grands Comptes',
+    category: Category.Gestao,
+    description: 'Réponse aux appels d\'offres, constitution du dossier technique et financier, conformité légale et négociation avec les donneurs d\'ordre.',
+    instructor: 'Albertine Mbuyi • Consultante Achats Stratégiques',
+    thumbnail: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '50h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Maîtrise des Appels d\'Offres',
+        lessons: [
+          { id: 'marche-1', title: 'Montage d\'une Offre Conforme et Compétitive', duration: '26 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'marketing-digital-vente-sociale',
+    title: 'Marketing Digital, Vente Sociale et Visibilité en Ligne',
+    category: Category.Gestao,
+    description: 'Stratégie de contenu sur les réseaux sociaux, prospection via messageries, campagnes publicitaires ciblées et fidélisation client.',
+    instructor: 'Vanessa Luboya • Consultante Marketing Digital',
+    thumbnail: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '45h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Prospection et Vente sur Canaux Mobiles',
+        lessons: [
+          { id: 'mkt-soc-1', title: 'Acquisition Client et Automatisation WhatsApp', duration: '25 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
         ]
       }
     ]
   }
 ];
 
-// --- 🌐 9. IDIOMAS ---
+// --- 🌐 9. LANGUES & COMMUNICATION INTERNATIONALE ---
 const IDIOMAS_COURSES: Course[] = [
   {
-    id: 'ingles-profissional-comunicacao',
-    title: 'Inglês Instrumental e Comunicação para Negócios Internacionais',
+    id: 'anglais-professionnel-industrie-commerce',
+    title: 'Anglais Professionnel pour l\'Industrie & le Commerce International',
     category: Category.Idiomas,
-    description: 'Vocabulário corporativo essencial, redação de e-mails formais, apresentações executivas e negociação em língua inglesa.',
-    instructor: 'Sarah Jenkins • Especialista em Business English',
+    description: 'Vocabulaire technique, correspondances commerciales, négociations contractuelles et présentations en anglais des affaires.',
+    instructor: 'Sarah Jenkins • Formatrice Business English',
     thumbnail: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=1200&auto=format&fit=crop',
-    progress: 15,
+    progress: 25,
     duration: '75h',
     modulesCount: 4,
     modules: [
       {
-        title: 'Módulo 1: Comunicação Executiva em Inglês',
+        title: 'Module 1 : Communication Professionnelle en Anglais',
         lessons: [
-          { id: 'ing-1', title: 'Conduzindo Reuniões e Conferências Internacionais', duration: '25 min', completed: true, videoUrl: STEM_VIDEO_1 },
-          { id: 'ing-2', title: 'Redação Comercial e Pitch de Negócios', duration: '30 min', completed: false, videoUrl: STEM_VIDEO_1 }
+          { id: 'ing-1', title: 'Conduite de Réunions et Échanges Commerciaux', duration: '25 min', completed: true, videoUrl: STEM_VIDEO_1 },
+          { id: 'ing-2', title: 'Rédaction d\'E-mails et Négociation Commerciale', duration: '30 min', completed: false, videoUrl: STEM_VIDEO_1 }
         ]
       }
     ]
   },
   {
-    id: 'frances-pratico-carreira',
-    title: 'Francês Prático para Carreira e Mobilidade Acadêmica',
+    id: 'anglais-accueil-services-protocole',
+    title: 'Anglais pour l\'Accueil, les Services et le Protocole Commercial',
     category: Category.Idiomas,
-    description: 'Gramática aplicada, pronúncia, compreensão oral e preparação para exames de proficiência (DELF/DALF) e intercâmbio.',
-    instructor: 'Prof. Jean-Marc Boucher • Aliança Francesa',
+    description: 'Accueil des délégations, hôtellerie, service client d\'excellence et fluidité conversationnelle au téléphone et en direct.',
+    instructor: 'Brian O\'Connor • Consultant Hôtellerie & Accueil',
+    thumbnail: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '50h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Vocabulaire de l\'Accueil et de l\'Écoute Client',
+        lessons: [
+          { id: 'acc-1', title: 'Salutations Professionnelles et Orientation des Visiteurs', duration: '22 min', completed: false, videoUrl: STEM_VIDEO_1 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'espagnol-affaires-relations-internationales',
+    title: 'Espagnol des Affaires & Relations Internationales',
+    category: Category.Idiomas,
+    description: 'Bases solides et tournures professionnelles pour échanger avec les partenaires hispanophones d\'Amérique latine et d\'Espagne.',
+    instructor: 'Elena Martinez • Professeure de Langues Appliquées',
     thumbnail: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=1200&auto=format&fit=crop',
     progress: 0,
@@ -560,47 +797,127 @@ const IDIOMAS_COURSES: Course[] = [
     modulesCount: 3,
     modules: [
       {
-        title: 'Módulo 1: Francês do Cotidiano e Profissional',
+        title: 'Module 1 : Espagnol Pratique du Travail',
         lessons: [
-          { id: 'fra-1', title: 'Expressões Essenciais e Entrevistas de Emprego em Francês', duration: '26 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
+          { id: 'esp-1', title: 'Formules de Politesse et Dialogues Commerciaux', duration: '26 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'culture-entreprise-leadership-diversifie',
+    title: 'Culture d\'Entreprise, Inclusion et Leadership Diversifié',
+    category: Category.Idiomas,
+    description: 'Valorisation des talents, intelligence intergénérationnelle, intégration des personnes en situation de handicap et climat de travail positif.',
+    instructor: 'Prof. Augustin Kalombo • Sociologue d\'Entreprise',
+    thumbnail: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '40h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Cohésion et Valeurs Partagées',
+        lessons: [
+          { id: 'lead-div-1', title: 'Management Bienveillant et Égalité des Chances', duration: '24 min', completed: false, videoUrl: WOMEN_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'communication-interculturelle-diplomatie-afrique',
+    title: 'Communication Interculturelle et Diplomatie d\'Affaires en Afrique',
+    category: Category.Idiomas,
+    description: 'Codes culturels, négociation dans l\'espace OHADA, partenariats régionaux et étiquette protocolaire panafricaine.',
+    instructor: 'Ambassadeur Hon. Jean-Luc Masangu • Diplomate',
+    thumbnail: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '45h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Protocoles Régionaux et Partenariats',
+        lessons: [
+          { id: 'diplo-1', title: 'Négociation Diplomatique et Respect des Cultures Régionales', duration: '28 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
         ]
       }
     ]
   }
 ];
 
-// --- 🍽️ 10. ALIMENTOS & BEBIDAS ---
+// --- 🍽️ 10. AGROALIMENTAIRE & PRODUCTION LOCALE ---
 const ALIMENTOS_COURSES: Course[] = [
   {
-    id: 'boas-praticas-manipulacao-alimentos',
-    title: 'Boas Práticas na Manipulação de Alimentos, Higiene & Vigilância Sanitária',
+    id: 'normes-haccp-hygiene-alimentaire',
+    title: 'Normes HACCP et Bonnes Pratiques d\'Hygiène Alimentaire',
     category: Category.Alimentos,
-    description: 'Normas de biossegurança e higiene na cadeia alimentar, prevenção de contaminação cruzada, armazenamento adequado e controle de temperatura.',
-    instructor: 'Nutricionista Juliana Ramos • Especialista em Qualidade Alimentar',
+    description: 'Contrôle de la chaîne du froid, désinfection des surfaces de travail, prévention des toxi-infections et conformité sanitaire officielle.',
+    instructor: 'Juliana Ramos • Inspectrice Sécurité Sanitaire',
     thumbnail: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=1200&auto=format&fit=crop',
     progress: 40,
     duration: '45h',
     modulesCount: 2,
     materials: [
-      { id: 'mat-ali-1', title: 'Manual de Boas Práticas e Higienização Alimentar', type: 'pdf', url: HEALTH_GUIDE_URL, isDownloaded: true }
+      { id: 'mat-ali-1', title: 'Manuel de Bonnes Pratiques et Hygiène HACCP', type: 'pdf', url: HEALTH_GUIDE_URL, isDownloaded: true }
     ],
     modules: [
       {
-        title: 'Módulo 1: Segurança Alimentar e Legislação',
+        title: 'Module 1 : Sécurité Sanitaire des Aliments',
         lessons: [
-          { id: 'ali-1', title: 'Controle de Microrganismos e Higiene Pessoal', duration: '24 min', completed: true, videoUrl: HEALTH_VIDEO_2 },
-          { id: 'ali-2', title: 'Rotulagem, Validade e Armazenamento Seguro', duration: '28 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+          { id: 'ali-1', title: 'Identification des Risques Biologiques et Chimiques', duration: '24 min', completed: true, videoUrl: HEALTH_VIDEO_2 },
+          { id: 'ali-2', title: 'Étiquetage, Conservation et Chaîne du Froid', duration: '28 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
         ]
       }
     ]
   },
   {
-    id: 'empreendedorismo-gastronomia',
-    title: 'Gestão e Empreendedorismo no Setor de Alimentos e Bebidas',
+    id: 'agroecologie-cultures-vivrieres-tropical',
+    title: 'Agroécologie et Cultures Vivrières en Milieu Tropical',
     category: Category.Alimentos,
-    description: 'Planejamento de cardápios, precificação gastronômica, ficha técnica de preparo, canais de entrega (delivery) e atendimento ao cliente.',
-    instructor: 'Chef André Fontana • Consultor de Restaurantes',
+    description: 'Manioc, maïs, haricot, maraîchage bio : préparation des sols sans brûlis, compostage et rotation des cultures à fort rendement.',
+    instructor: 'João Pedro Mendonça • Ingénieur Agronome',
+    thumbnail: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '50h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Agronomie Durable et Semences Améliorées',
+        lessons: [
+          { id: 'agro-1', title: 'Compostage Organique et Gestion Hydrique', duration: '25 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'pisciculture-continentale-bassin',
+    title: 'Pisciculture Continentale & Élevage en Bassin',
+    category: Category.Alimentos,
+    description: 'Élevage de tilapias et poissons-chats (clarias) : construction de bassins, alimentation locale, gestion de l\'eau et commercialisation rentable.',
+    instructor: 'Ing. Jacques Mayamba • Spécialiste Aquaculture',
+    thumbnail: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1200&auto=format&fit=crop',
+    progress: 0,
+    duration: '45h',
+    modulesCount: 2,
+    modules: [
+      {
+        title: 'Module 1 : Création et Gestion de Bassins Aquacoles',
+        lessons: [
+          { id: 'pisci-1', title: 'Reproduction, Nourriture et Qualité de l\'Eau', duration: '27 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'transformation-locale-manioc-mais-fruits',
+    title: 'Transformation Locale : Valorisation du Manioc, Maïs et Fruits',
+    category: Category.Alimentos,
+    description: 'Farines panifiables, confitures artisanales, séchage solaire et emballage hygiénique pour prolonger la conservation et décupler la valeur ajoutée.',
+    instructor: 'Chef André Fontana • Technologue Agroalimentaire',
     thumbnail: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop',
     progress: 0,
@@ -608,105 +925,125 @@ const ALIMENTOS_COURSES: Course[] = [
     modulesCount: 3,
     modules: [
       {
-        title: 'Módulo 1: Estruturação do Negócio Gastronômico',
+        title: 'Module 1 : Transformation et Conservation sans Gaspillage',
         lessons: [
-          { id: 'gas-1', title: 'Fichas Técnicas e Formação de Preço de Venda', duration: '25 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
-        ]
-      }
-    ]
-  }
-];
-
-// --- 📝 11. PREPARATÓRIO ENEM ---
-const ENEM_COURSES: Course[] = [
-  {
-    id: 'redacao-enem-nota-1000',
-    title: 'Redação Nota 1000 & Estrutura Dissertativo-Argumentativa para o ENEM',
-    category: Category.ENEM,
-    description: 'Domínio das 5 competências avaliadas no ENEM, repertório sociocultural produtivo, conectivos coesivos e propostas de intervenção detalhadas.',
-    instructor: 'Prof. Tiago Meira • Corretor Oficial e Mentor de Redação',
-    thumbnail: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop',
-    progress: 60,
-    duration: '80h',
-    modulesCount: 4,
-    materials: [
-      { id: 'mat-enem-1', title: 'Guia de Conectivos e Modelos de Redação Nota 1000', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
-    ],
-    modules: [
-      {
-        title: 'Módulo 1: As 5 Competências do ENEM',
-        lessons: [
-          { id: 'red-1', title: 'Construção da Tese e Projeto de Texto', duration: '26 min', completed: true, videoUrl: STEM_VIDEO_1 },
-          { id: 'red-2', title: 'Proposta de Intervenção com os 5 Elementos Obrigatórios', duration: '32 min', completed: true, videoUrl: STEM_VIDEO_1 }
+          { id: 'trans-1', title: 'Techniques de Séchage et Ensachage Hermétique', duration: '25 min', completed: false, videoUrl: WOMEN_VIDEO_1 }
         ]
       }
     ]
   },
   {
-    id: 'matematica-ciencias-natureza-enem',
-    title: 'Matemática e Ciências da Natureza para o ENEM',
-    category: Category.ENEM,
-    description: 'Resolução comentada de questões recorrentes: funções, geometria plana e espacial, estatística, cinemática, reações orgânicas e ecologia.',
-    instructor: 'Prof. Vinicius Andrade • Professor de Exatas',
-    thumbnail: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=1200&auto=format&fit=crop',
+    id: 'nutrition-familiale-securite-alimentaire',
+    title: 'Nutrition Familiale & Sécurité Alimentaire Communautaire',
+    category: Category.Alimentos,
+    description: 'Équilibre des repas, lutte contre la malnutrition infantile, valorisation des produits locaux riches en fer et micronutriments.',
+    instructor: 'Dr. Patient Banza • Médecin Nutritionniste',
+    thumbnail: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1200&auto=format&fit=crop',
     progress: 0,
-    duration: '90h',
-    modulesCount: 4,
+    duration: '35h',
+    modulesCount: 2,
     modules: [
       {
-        title: 'Módulo 1: Matemática Básica e Estatística Recorrente',
+        title: 'Module 1 : Alimentation Équilibrée avec Produits du Marché',
         lessons: [
-          { id: 'mat-enem-l1', title: 'Regra de Três, Porcentagem e Análise de Gráficos', duration: '29 min', completed: false, videoUrl: STEM_VIDEO_1 }
+          { id: 'nutri-1', title: 'Besoins Nutritionnels de l\'Enfant et de la Mère', duration: '22 min', completed: false, videoUrl: HEALTH_VIDEO_2 }
         ]
       }
     ]
   }
 ];
 
-// --- 🎓 12. EJA (EDUCAÇÃO DE JOVENS E ADULTOS) ---
+// --- 📝 11. PRÉPARATION AUX EXAMENS D'ÉTAT (EXETAT) ---
+const ENEM_COURSES: Course[] = [
+  {
+    id: 'prepa-exetat-sciences-maths',
+    title: 'Préparation Complète aux Examens d\'État (EXETAT) - Sciences & Maths',
+    category: Category.ENEM,
+    description: 'Résolution commentée des items des sessions précédentes : analyse mathématique, physique, chimie organique et biologie cellulaire.',
+    instructor: 'Prof. Dieudonné Mwamba • Enseignant Émérite EXETAT',
+    thumbnail: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=1200&auto=format&fit=crop',
+    progress: 60,
+    duration: '80h',
+    modulesCount: 4,
+    materials: [
+      { id: 'mat-exetat-1', title: 'Recueil des Épreuves et Solutions Officielles EXETAT', type: 'pdf', url: EXCELLENTIA_GUIDE_URL, isDownloaded: true }
+    ],
+    modules: [
+      {
+        title: 'Module 1 : Mathématiques et Physique aux Examens d\'État',
+        lessons: [
+          { id: 'exetat-1', title: 'Résolution Stratégique des QCM et Calcul Rapide', duration: '28 min', completed: true, videoUrl: STEM_VIDEO_1 },
+          { id: 'exetat-2', title: 'Points Clés de Physique et Électricité', duration: '32 min', completed: true, videoUrl: STEM_VIDEO_2 }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'dissertation-francais-culture-generale',
+    title: 'Méthodologie de Réussite aux Épreuves de Français et Culture Générale',
+    category: Category.ENEM,
+    description: 'Structure de la dissertation littéraire et philosophique, règles grammaticales strictes, rédaction d\'une argumentation percutante et gestion du temps d\'examen.',
+    instructor: 'Prof. Tiago Meira • Spécialiste des Épreuves Écrites',
+    thumbnail: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop',
+    progress: 15,
+    duration: '70h',
+    modulesCount: 3,
+    modules: [
+      {
+        title: 'Module 1 : Plan de Dissertation et Argumentation',
+        lessons: [
+          { id: 'diss-1', title: 'Introduction, Problématique et Conclusion Réussies', duration: '25 min', completed: false, videoUrl: STEM_VIDEO_1 }
+        ]
+      }
+    ]
+  }
+];
+
+// --- 🎓 12. ÉDUCATION DES ADULTES ---
 const EJA_COURSES: Course[] = [
   {
-    id: 'letramento-digital-cidadania-eja',
-    title: 'Alfabetização e Letramento Digital para Jovens e Adultos (EJA)',
+    id: 'alphabetisation-fonctionnelle-calcul',
+    title: 'Alphabétisation Fonctionnelle & Calcul Pratique pour Adultes',
     category: Category.EJA,
-    description: 'Aprenda no seu ritmo: leitura e interpretação de textos do cotidiano, navegação segura na internet, envio de mensagens e uso de serviços públicos digitais.',
-    instructor: 'Profa. Rosa Maria Silveira • Pedagoga Especialista em EJA',
+    description: 'Apprentissage personnalisé et bienveillant : lecture des documents du quotidien, calcul des transactions, signatures et formulaires administratifs.',
+    instructor: 'Profa. Rosa Maria Silveira • Pédagogue d\'Adultes',
     thumbnail: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop',
     heroImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop',
     progress: 25,
     duration: '50h',
     modulesCount: 3,
     materials: [
-      { id: 'mat-eja-1', title: 'Caderno de Atividades Práticas e Leitura do Cotidiano', type: 'pdf', url: RIGHTS_GUIDE_URL, isDownloaded: true }
+      { id: 'mat-eja-1', title: 'Cahier Pratique d\'Alphabétisation et Calcul Quotidien', type: 'pdf', url: RIGHTS_GUIDE_URL, isDownloaded: true }
     ],
     modules: [
       {
-        title: 'Módulo 1: Comunicação e Uso do Smartphone no Dia a Dia',
+        title: 'Module 1 : Communication et Calcul dans la Vie Quotidienne',
         lessons: [
-          { id: 'eja-1', title: 'Leitura de Mensagens, Formulários e Textos Cotidianos', duration: '20 min', completed: true, videoUrl: CIVIC_VIDEO_1 },
-          { id: 'eja-2', title: 'Navegação na Internet e Segurança com Senhas', duration: '25 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
+          { id: 'eja-1', title: 'Lecture de Documents, Reçus et Formulaires Courants', duration: '20 min', completed: true, videoUrl: CIVIC_VIDEO_1 },
+          { id: 'eja-2', title: 'Gestion Pratique des Sommes et Paiements Mobiles', duration: '25 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
         ]
       }
     ]
   },
   {
-    id: 'matematica-pratica-trabalho-eja',
-    title: 'Cidadania, Matemática do Dia a Dia & Direitos Trabalhistas (EJA)',
+    id: 'insertion-professionnelle-metiers-techniques',
+    title: 'Insertion Professionnelle et Métiers Techniques Urbains',
     category: Category.EJA,
-    description: 'Cálculo de orçamento doméstico, compras e troco, leitura de holerite, direitos fundamentais do trabalhador e cidadania ativa.',
-    instructor: 'Prof. Antônio Carlos Pereira • Educador Popular',
-    thumbnail: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=600&auto=format&fit=crop',
-    heroImage: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=1200&auto=format&fit=crop',
+    description: 'Bases en électricité domestique, plomberie sanitaire, maintenance mécanique de base et techniques de recherche d\'emploi et devis.',
+    instructor: 'Prof. Antônio Carlos Pereira • Éducateur Technique',
+    thumbnail: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop',
+    heroImage: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop',
     progress: 0,
     duration: '45h',
     modulesCount: 3,
     modules: [
       {
-        title: 'Módulo 1: Matemática Prática nas Finanças Pessoais',
+        title: 'Module 1 : Notions Clés des Métiers Techniques de Proximité',
         lessons: [
-          { id: 'eja-m1', title: 'Controle de Gastos e Economia Familiar', duration: '22 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
+          { id: 'eja-m1', title: 'Sécurité au Travail et Outils Standards du Bâtiment', duration: '22 min', completed: false, videoUrl: CIVIC_VIDEO_1 }
         ]
       }
     ]
@@ -767,74 +1104,74 @@ export const STRATEGIC_AXES = [
   },
   {
     id: Category.Educacao,
-    title: 'Educação',
-    shortDesc: 'Metodologias ativas, didática inovadora e práticas pedagógicas inclusivas.',
+    title: 'Éducation & Qualification',
+    shortDesc: 'Compétences fondamentales, formation continue, mathématiques appliquées et pédagogie professionnelle.',
     iconName: 'BookOpen',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Formação Docente & Inovação'
+    stats: 'Formation Continue & Qualification'
   },
   {
     id: Category.Tecnologia,
-    title: 'Tecnologia',
-    shortDesc: 'Programação web, inteligência artificial, nuvem e engenharia de software.',
+    title: 'Technologie & Innovation',
+    shortDesc: 'Informatique professionnelle, Cloud, Industrie 4.0, IoT, SCADA et cybersécurité opérationnelle.',
     iconName: 'Terminal',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Desenvolvimento & Dados'
+    stats: 'Transformation Numérique & Industrie 4.0'
   },
   {
     id: Category.Sustentabilidade,
-    title: 'Sustentabilidade',
-    shortDesc: 'ESG, energias renováveis, agroecologia e conservação ambiental.',
+    title: 'Environnement & Durabilité',
+    shortDesc: 'Préservation du Bassin du Congo, RSE, économie circulaire, gestion des déchets et normes ESG.',
     iconName: 'Leaf',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Impacto Socioambiental'
+    stats: 'Impact Écologique & Bassin du Congo'
   },
   {
     id: Category.Gestao,
-    title: 'Gestão',
-    shortDesc: 'Liderança ágil, finanças corporativas e planejamento estratégico.',
+    title: 'Gestion & Entrepreneuriat',
+    shortDesc: 'Création d\'entreprise, gestion financière, coopératives, marchés publics et marketing digital.',
     iconName: 'Briefcase',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Gestão de Negócios'
+    stats: 'Leadership & Gestion d\'Entreprise'
   },
   {
     id: Category.Idiomas,
-    title: 'Idiomas',
-    shortDesc: 'Inglês corporativo e francês aplicado para intercâmbio e negócios.',
+    title: 'Langues & Communication',
+    shortDesc: 'Anglais professionnel et commercial, espagnol des affaires, accueil et diplomatie.',
     iconName: 'Globe',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Comunicação Global'
+    stats: 'Communication Internationale'
   },
   {
     id: Category.Alimentos,
-    title: 'Alimentos & Bebidas',
-    shortDesc: 'Boas práticas de manipulação, vigilância sanitária e gastronomia.',
+    title: 'Agroalimentaire & Production Locale',
+    shortDesc: 'Normes HACCP, agroécologie, pisciculture en bassin, transformation locale et nutrition.',
     iconName: 'Utensils',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Segurança Alimentar'
+    stats: 'Sécurité Alimentaire & Souveraineté'
   },
   {
     id: Category.ENEM,
-    title: 'Preparatório ENEM',
-    shortDesc: 'Redação nota 1000, matemática, ciências e simulados completos.',
+    title: 'Préparation Examens d\'État (EXETAT)',
+    shortDesc: 'Sciences, mathématiques, méthodologie de dissertation, culture générale et annales commentées.',
     iconName: 'Award',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Aprovação Universitária'
+    stats: 'Excellence Académique & Diplôme d\'État'
   },
   {
     id: Category.EJA,
-    title: 'EJA',
-    shortDesc: 'Educação de Jovens e Adultos com letramento digital e matemática cidadã.',
+    title: 'Éducation des Adultes',
+    shortDesc: 'Alphabétisation fonctionnelle, calcul pratique, insertion professionnelle et métiers techniques.',
     iconName: 'Users',
     color: '#183D73',
     accentColor: '#E8B84B',
-    stats: 'Inclusão & Cidadania'
+    stats: 'Inclusion Sociale & Compétences Pratiques'
   }
 ];

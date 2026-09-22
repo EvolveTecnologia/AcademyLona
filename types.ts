@@ -3,18 +3,18 @@ export enum Category {
   // Piliers Fondation Lona
   Excellentia = 'Programme EXCELLENTIA & STEM',
   Sante = 'Santé & Prévention',
-  Autonomisation = 'Autonomisation des Femmes & Entrepreneuriat',
+  Autonomisation = 'Autonomisation des Femmes',
   DroitsHumains = 'Éducation Civique & Droits Humains',
 
-  // Categorias Iniciais da Plataforma
-  Educacao = 'Educação',
-  Tecnologia = 'Tecnologia',
-  Sustentabilidade = 'Sustentabilidade',
-  Gestao = 'Gestão',
-  Idiomas = 'Idiomas',
-  Alimentos = 'Alimentos & Bebidas',
-  ENEM = 'Preparatório ENEM',
-  EJA = 'EJA'
+  // Catégories Incluses de la Plateforme (en français)
+  Educacao = 'Éducation & Qualification',
+  Tecnologia = 'Technologie & Innovation Digitale',
+  Sustentabilidade = 'Environnement & Durabilité',
+  Gestao = 'Gestion & Entrepreneuriat',
+  Idiomas = 'Langues & Communication',
+  Alimentos = 'Agroalimentaire & Production',
+  ENEM = 'Préparation aux Examens d\'État',
+  EJA = 'Éducation des Adultes'
 }
 
 export interface Lesson {

@@ -91,28 +91,28 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
   };
 
   return (
-    <div className="min-h-screen bg-[#122C34] text-white animate-in slide-in-from-right duration-300 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#0F172A] text-white animate-in slide-in-from-right duration-300 relative overflow-x-hidden">
       
       {/* Header Buttons */}
       <div className="absolute top-0 left-0 w-full z-50 p-6 flex justify-between items-center pointer-events-none">
         <button 
           onClick={onBack} 
-          className="p-2.5 bg-[#122C34]/70 backdrop-blur-md border border-white/10 rounded-full text-white hover:bg-[#122C34] transition-colors pointer-events-auto shadow-lg cursor-pointer"
+          className="p-2.5 bg-[#0F172A]/80 backdrop-blur-md border border-white/15 rounded-full text-white hover:bg-[#183D73] transition-colors pointer-events-auto shadow-lg cursor-pointer"
         >
           <ChevronLeft size={24} />
         </button>
         <button 
           onClick={() => onToggleMyList && onToggleMyList(course.id)}
-          className="p-2.5 bg-[#122C34]/70 backdrop-blur-md border border-white/10 rounded-full text-white hover:bg-[#122C34] transition-colors pointer-events-auto shadow-lg cursor-pointer"
+          className="p-2.5 bg-[#0F172A]/80 backdrop-blur-md border border-white/15 rounded-full text-white hover:bg-[#183D73] transition-colors pointer-events-auto shadow-lg cursor-pointer"
         >
-          <Star size={24} className={isInList ? 'fill-[#F26522] text-[#F26522]' : 'text-white'} />
+          <Star size={24} className={isInList ? 'fill-[#E8B84B] text-[#E8B84B]' : 'text-white'} />
         </button>
       </div>
 
       {/* Hero Banner Area */}
       <div className="relative w-full h-[45vh] md:h-[60vh] overflow-hidden">
         <img src={course.heroImage} className="w-full h-full object-cover" alt="" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#122C34] via-[#122C34]/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent" />
       </div>
 
       {/* Info Area */}
@@ -121,7 +121,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white leading-tight uppercase tracking-tight drop-shadow-xl break-words">
             {course.title}
           </h1>
-          <p className="text-[#0E98A8] text-xs sm:text-sm font-bold">
+          <p className="text-[#E8B84B] text-xs sm:text-sm font-bold">
             {course.category} • Formateur : {course.instructor}
           </p>
           <p className="text-gray-300 text-xs sm:text-sm max-w-3xl leading-relaxed line-clamp-3 md:line-clamp-none">
@@ -132,17 +132,17 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
           <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-2 sm:pt-3">
             <button 
               onClick={() => course.modules?.[0]?.lessons?.[0] && onLessonClick(course.modules[0].lessons[0])}
-              className="flex-1 sm:flex-none sm:w-64 flex items-center justify-center gap-2.5 bg-[#F26522] hover:bg-[#EE591D] text-white py-3 sm:py-3.5 px-5 rounded-xl font-bold transition-transform active:scale-95 shadow-md uppercase tracking-wider text-xs cursor-pointer"
+              className="flex-1 sm:flex-none sm:w-64 flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#E8B84B] to-[#D4A338] hover:from-[#FCE082] hover:to-[#E8B84B] text-[#0F172A] py-3 sm:py-3.5 px-5 rounded-xl font-black transition-transform active:scale-95 shadow-lg shadow-[#E8B84B]/20 uppercase tracking-wider text-xs cursor-pointer"
             >
               <Play size={16} fill="currentColor" /> REGARDER MAINTENANT
             </button>
             <button 
               onClick={() => setActiveTab('tuteur')}
-              className="flex items-center justify-center gap-2 px-4 sm:px-5 py-3 sm:py-3.5 bg-gradient-to-r from-[#0A7A94] to-[#0E98A8] hover:from-[#0E98A8] hover:to-[#0A7A94] text-white rounded-xl font-bold transition-all shadow-md uppercase tracking-wider text-xs cursor-pointer border border-white/15"
+              className="flex items-center justify-center gap-2 px-4 sm:px-5 py-3 sm:py-3.5 bg-gradient-to-r from-[#183D73] to-[#102B52] hover:from-[#245398] hover:to-[#183D73] text-white rounded-xl font-bold transition-all shadow-md uppercase tracking-wider text-xs cursor-pointer border border-[#E8B84B]/30"
             >
-              <Sparkles size={15} className="text-amber-300" /> Poser une question à l'IA
+              <Sparkles size={15} className="text-[#E8B84B]" /> Poser une question à l'IA
             </button>
-            <button className="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-[#1A2B32] border border-white/10 rounded-xl hover:bg-[#1A2B32]/80 transition-colors text-white shadow-md cursor-pointer" title="Télécharger">
+            <button className="w-11 h-11 flex-shrink-0 flex items-center justify-center bg-[#1E293B] border border-white/10 rounded-xl hover:bg-[#334155] transition-colors text-white shadow-md cursor-pointer" title="Télécharger">
               <Download size={18} />
             </button>
           </div>
@@ -167,7 +167,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
             >
               {tab.label}
               {activeTab === tab.id && (
-                <div className="absolute bottom-0 left-0 w-full h-1 bg-[#F26522] rounded-full" />
+                <div className="absolute bottom-0 left-0 w-full h-1 bg-[#E8B84B] rounded-full" />
               )}
             </button>
           ))}
@@ -185,7 +185,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                   className="w-full py-4 flex items-center justify-between group active:bg-white/5 transition-colors cursor-pointer"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-1.5 h-5 bg-[#0A7A94] rounded-full" />
+                    <div className="w-1.5 h-5 bg-[#E8B84B] rounded-full" />
                     <h3 className="text-xs md:text-sm font-bold uppercase tracking-wider text-gray-300 text-left">
                       {module.title}
                     </h3>
@@ -203,7 +203,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                       <div 
                         key={lesson.id} 
                         onClick={() => onLessonClick(lesson)} 
-                        className="flex gap-4 items-center group p-3.5 rounded-2xl bg-[#1A2B32] hover:bg-[#1A2B32]/80 transition-all border border-[#0A7A94]/20 cursor-pointer"
+                        className="flex gap-4 items-center group p-3.5 rounded-2xl bg-[#1E293B] hover:bg-[#183D73]/60 transition-all border border-white/10 hover:border-[#E8B84B]/40 cursor-pointer"
                       >
                         <div className="relative w-24 h-16 rounded-xl overflow-hidden shrink-0 bg-black shadow-lg">
                           <img src={course.thumbnail} className="w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform" alt="" />
@@ -221,7 +221,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                               {lesson.duration}
                             </span>
                             {progressPercent > 0 && (
-                              <span className="text-[10px] font-bold text-[#0E98A8]">
+                              <span className="text-[10px] font-bold text-[#E8B84B]">
                                 {Math.round(progressPercent)}%
                               </span>
                             )}
@@ -230,7 +230,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                           {progressPercent > 0 && (
                             <div className="w-full h-1 bg-white/10 mt-2 rounded-full overflow-hidden">
                               <div 
-                                className="h-full bg-[#0A7A94]" 
+                                className="h-full bg-[#E8B84B]" 
                                 style={{ width: `${progressPercent}%` }}
                               />
                             </div>
@@ -253,9 +253,9 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                 <div 
                   key={material.id} 
                   onClick={() => onMaterialClick && onMaterialClick(material)} 
-                  className={`flex items-center gap-4 p-4 bg-[#1A2B32] border rounded-2xl transition-all cursor-pointer ${isDownloaded ? 'border-emerald-500/30' : 'border-white/10 hover:border-[#0A7A94]'}`}
+                  className={`flex items-center gap-4 p-4 bg-[#1E293B] border rounded-2xl transition-all cursor-pointer ${isDownloaded ? 'border-emerald-500/40' : 'border-white/10 hover:border-[#E8B84B]/40'}`}
                 >
-                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${isDownloaded ? 'bg-emerald-500/20 text-emerald-400' : 'bg-[#0A7A94]/20 text-[#0E98A8]'}`}>
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center ${isDownloaded ? 'bg-emerald-500/20 text-emerald-400' : 'bg-[#183D73] text-[#E8B84B]'}`}>
                     <FileText size={22} />
                   </div>
                   <div className="flex-1 overflow-hidden">
@@ -276,36 +276,36 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                 Aucun quiz d'évaluation n'est requis pour cette session.
               </div>
             ) : !quizStarted ? (
-              <div className="p-8 bg-[#1A2B32] rounded-3xl border border-white/10 text-center flex flex-col items-center">
-                <div className="w-16 h-16 bg-[#0A7A94]/20 rounded-full flex items-center justify-center mb-5 text-[#0E98A8]">
+              <div className="p-8 bg-[#1E293B] rounded-3xl border border-white/10 text-center flex flex-col items-center">
+                <div className="w-16 h-16 bg-[#183D73] rounded-full flex items-center justify-center mb-5 text-[#E8B84B]">
                   <RotateCcw size={30} />
                 </div>
                 <h3 className="text-base font-black uppercase mb-1">Quiz de Validation</h3>
                 <p className="text-xs text-gray-300 mb-6 max-w-sm">Testez vos acquis pour valider ce module et débloquer vos badges académiques.</p>
                 <button 
                   onClick={() => setQuizStarted(true)} 
-                  className="w-full md:w-80 py-3.5 bg-[#F26522] hover:bg-[#EE591D] text-white rounded-xl font-bold text-xs tracking-wider uppercase shadow-xl transition-all cursor-pointer"
+                  className="w-full md:w-80 py-3.5 bg-gradient-to-r from-[#E8B84B] to-[#D4A338] hover:from-[#FCE082] hover:to-[#E8B84B] text-[#0F172A] rounded-xl font-black text-xs tracking-wider uppercase shadow-xl transition-all cursor-pointer"
                 >
                   DÉMARRER LE QUIZ
                 </button>
               </div>
             ) : quizFinished ? (
-              <div className="p-8 bg-[#1A2B32] rounded-3xl border border-white/10 text-center">
-                <h3 className="text-xs font-bold text-[#0E98A8] uppercase tracking-wider mb-2">Score Final</h3>
+              <div className="p-8 bg-[#1E293B] rounded-3xl border border-white/10 text-center">
+                <h3 className="text-xs font-bold text-[#E8B84B] uppercase tracking-wider mb-2">Score Final</h3>
                 <div className="text-4xl font-black text-white mb-2">{calculateScore()} / {course.quiz.length}</div>
                 <p className="text-xs text-gray-300">
                   {calculateScore() >= (course.quiz.length / 2) ? 'Félicitations, vous avez validé cette étape !' : 'Continuez à réviser et réessayez.'}
                 </p>
                 <button 
                   onClick={resetQuiz} 
-                  className="mt-6 text-[#F26522] hover:text-[#EE591D] font-bold uppercase text-xs tracking-wider cursor-pointer"
+                  className="mt-6 text-[#E8B84B] hover:underline font-bold uppercase text-xs tracking-wider cursor-pointer"
                 >
                   Refaire le test
                 </button>
               </div>
             ) : (
               <div className="space-y-6">
-                <div className="p-6 bg-[#1A2B32] rounded-3xl border border-white/10">
+                <div className="p-6 bg-[#1E293B] rounded-3xl border border-white/10">
                   <h3 className="text-sm font-bold text-white leading-relaxed mb-6">
                     Question {currentQuestionIndex + 1}/{course.quiz.length} : {course.quiz?.[currentQuestionIndex].question}
                   </h3>
@@ -316,12 +316,12 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                         onClick={() => handleAnswerSelect(oIdx)} 
                         className={`w-full p-4 rounded-2xl text-left text-xs transition-all flex justify-between items-center cursor-pointer ${
                           selectedAnswers[currentQuestionIndex] === oIdx 
-                            ? 'bg-[#0A7A94] text-white font-bold' 
-                            : 'bg-[#122C34] text-gray-300 border border-white/10 hover:border-white/20'
+                            ? 'bg-[#183D73] border border-[#E8B84B] text-white font-bold' 
+                            : 'bg-[#0F172A] text-gray-300 border border-white/10 hover:border-white/20'
                         }`}
                       >
                         <span>{opt}</span>
-                        {selectedAnswers[currentQuestionIndex] === oIdx && <Check size={16} />}
+                        {selectedAnswers[currentQuestionIndex] === oIdx && <Check size={16} className="text-[#E8B84B]" />}
                       </button>
                     ))}
                   </div>
@@ -329,7 +329,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
                 <button 
                   disabled={selectedAnswers[currentQuestionIndex] === undefined} 
                   onClick={handleNextQuestion} 
-                  className="w-full py-4 bg-[#F26522] hover:bg-[#EE591D] text-white rounded-xl font-bold text-xs tracking-wider shadow-xl disabled:opacity-40 cursor-pointer"
+                  className="w-full py-4 bg-gradient-to-r from-[#E8B84B] to-[#D4A338] hover:from-[#FCE082] hover:to-[#E8B84B] text-[#0F172A] rounded-xl font-black text-xs tracking-wider shadow-xl disabled:opacity-40 cursor-pointer"
                 >
                   {currentQuestionIndex < course.quiz.length - 1 ? 'QUESTION SUIVANTE' : 'VALIDER ET TERMINER'}
                 </button>
@@ -340,7 +340,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
 
         {activeTab === 'tuteur' && (
           <div className="animate-in fade-in duration-300">
-            <div className="h-[680px] rounded-3xl overflow-hidden border border-[#0A7A94]/30 shadow-2xl">
+            <div className="h-[680px] rounded-3xl overflow-hidden border border-[#183D73] shadow-2xl">
               <GeminiStudyAssistant initialCourse={course} />
             </div>
           </div>
@@ -349,7 +349,7 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
 
       {deleteConfirmId && (
         <div className="fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-6 animate-in fade-in duration-300">
-          <div className="bg-[#1A2B32] border border-white/10 rounded-3xl p-8 w-full max-w-sm text-center space-y-6">
+          <div className="bg-[#1E293B] border border-white/10 rounded-3xl p-8 w-full max-w-sm text-center space-y-6">
             <div className="w-14 h-14 bg-red-500/20 text-red-400 rounded-full flex items-center justify-center mx-auto">
               <AlertCircle size={28} />
             </div>

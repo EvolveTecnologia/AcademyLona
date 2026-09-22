@@ -84,7 +84,7 @@ const LandingFooter: React.FC<LandingFooterProps> = ({ onViewChange }) => {
 
       {/* Bottom Bar */}
       <div className="max-w-7xl mx-auto border-t border-white/15 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-white/70">
-        <p>Copyright © 2026 Fondation Lona. Tous droits réservés.</p>
+        <p>Copyright © 2026 AmaniTech. Tous droits réservés.</p>
         <p className="text-white/70 text-[11px]">
           Plateforme officielle <span className="text-[#E8B84B] font-bold">Academy Lona</span> • République Démocratique du Congo.
         </p>

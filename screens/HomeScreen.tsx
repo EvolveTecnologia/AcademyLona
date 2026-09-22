@@ -51,27 +51,27 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
     },
     {
       id: 'fundamentos-programacao-web',
-      title: 'TECNOLOGIA & DESENVOLVIMENTO WEB',
-      subtitle: 'Carreira Tech',
-      description: 'Lógica, programação front-end, inteligência artificial e computação em nuvem.',
+      title: 'TECHNOLOGIE & INNOVATION DIGITALE',
+      subtitle: 'Carrière Tech & Cloud',
+      description: 'Programmation moderne, outils collaboratifs Cloud, cybersécurité, automatisation industrielle et intelligence artificielle.',
       image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop',
-      category: 'Tecnologia'
+      category: 'Technologie & Innovation'
     }
   ];
 
   const categories = [
     { id: Category.Excellentia, label: 'EXCELLENTIA & STEM', icon: GraduationCap, color: 'from-[#183D73] to-[#102B52]' },
     { id: Category.Sante, label: 'Santé & Prévention', icon: HeartPulse, color: 'from-[#0B6E4F] to-[#183D73]' },
-    { id: Category.Autonomisation, label: 'Autonomisation Féminine', icon: Sparkles, color: 'from-[#8C271E] to-[#183D73]' },
-    { id: Category.DroitsHumains, label: 'Droits Humains & Civisme', icon: Scale, color: 'from-[#2D3142] to-[#183D73]' },
-    { id: Category.Educacao, label: 'Educação', icon: BookOpen, color: 'from-[#183D73] to-[#0A558C]' },
-    { id: Category.Tecnologia, label: 'Tecnologia', icon: Terminal, color: 'from-[#0A558C] to-[#102B52]' },
-    { id: Category.Sustentabilidade, label: 'Sustentabilidade', icon: Leaf, color: 'from-[#0B6E4F] to-[#0D4B34]' },
-    { id: Category.Gestao, label: 'Gestão', icon: Briefcase, color: 'from-[#6E4F0B] to-[#183D73]' },
-    { id: Category.Idiomas, label: 'Idiomas', icon: Globe, color: 'from-[#1E3A8A] to-[#183D73]' },
-    { id: Category.Alimentos, label: 'Alimentos & Bebidas', icon: Utensils, color: 'from-[#854D0E] to-[#183D73]' },
-    { id: Category.ENEM, label: 'Preparatório ENEM', icon: Award, color: 'from-[#7C2D12] to-[#183D73]' },
-    { id: Category.EJA, label: 'EJA', icon: Users, color: 'from-[#374151] to-[#183D73]' }
+    { id: Category.Autonomisation, label: 'Autonomisation des Femmes', icon: Sparkles, color: 'from-[#8C271E] to-[#183D73]' },
+    { id: Category.DroitsHumains, label: 'Droits Humains & Citoyenneté', icon: Scale, color: 'from-[#2D3142] to-[#183D73]' },
+    { id: Category.Educacao, label: 'Éducation & Qualification', icon: BookOpen, color: 'from-[#183D73] to-[#0A558C]' },
+    { id: Category.Tecnologia, label: 'Technologie & Innovation', icon: Terminal, color: 'from-[#0A558C] to-[#102B52]' },
+    { id: Category.Sustentabilidade, label: 'Environnement & Durabilité', icon: Leaf, color: 'from-[#0B6E4F] to-[#0D4B34]' },
+    { id: Category.Gestao, label: 'Gestion & Entrepreneuriat', icon: Briefcase, color: 'from-[#6E4F0B] to-[#183D73]' },
+    { id: Category.Idiomas, label: 'Langues & Communication', icon: Globe, color: 'from-[#1E3A8A] to-[#183D73]' },
+    { id: Category.Alimentos, label: 'Agroalimentaire & Production', icon: Utensils, color: 'from-[#854D0E] to-[#183D73]' },
+    { id: Category.ENEM, label: 'Préparation Examens (EXETAT)', icon: Award, color: 'from-[#7C2D12] to-[#183D73]' },
+    { id: Category.EJA, label: 'Éducation des Adultes', icon: Users, color: 'from-[#374151] to-[#183D73]' }
   ];
 
   useEffect(() => {
@@ -207,80 +207,52 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
         </div>
       </div>
 
-      {/* Categories Row (The 4 Strategic Axes) */}
+      {/* Categories Row (Horizontal scroll without scrollbars) */}
       <div className={`mb-8 relative z-20 ${CONTENT_PADDING}`}>
-        <h3 className="text-xs font-bold text-gray-300 mb-3 uppercase tracking-wider flex items-center gap-2">
-          <Star size={14} className="text-[#E8B84B] fill-[#E8B84B]" />
-          <span>Les 4 Piliers Éducatifs Officiels • Fondation Lona</span>
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
-          {categories.map((cat) => {
-            const Icon = cat.icon;
-            return (
-              <button 
-                key={cat.id}
-                onClick={() => onCategoryClick(cat.id)}
-                className={`relative h-20 sm:h-24 md:h-28 bg-gradient-to-br ${cat.color} border border-white/15 rounded-2xl hover:border-[#E8B84B] hover:scale-[1.02] transition-all duration-300 group shadow-lg flex items-center justify-center overflow-hidden w-full cursor-pointer`}
-              >
-                <div className="z-10 flex flex-col items-center gap-2 px-3 text-center">
-                  <Icon size={22} className="text-[#E8B84B] group-hover:scale-110 transition-transform" />
-                  <span className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-white leading-tight">{cat.label}</span>
-                </div>
-                <div className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity" />
-              </button>
-            );
-          })}
+        <div className="flex items-center justify-between mb-3">
+          <h3 className="text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-2">
+            <Star size={14} className="text-[#E8B84B] fill-[#E8B84B]" />
+            <span>Catégories & Domaines d'Apprentissage</span>
+          </h3>
+        </div>
+        <div className="relative">
+          <div className="flex items-center gap-3 overflow-x-auto hide-scrollbar py-2 scroll-smooth">
+            {categories.map((cat) => {
+              const Icon = cat.icon;
+              return (
+                <button 
+                  key={cat.id}
+                  onClick={() => onCategoryClick(cat.id)}
+                  className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-r ${cat.color} border border-white/15 hover:border-[#E8B84B] hover:scale-[1.03] active:scale-95 transition-all duration-200 group shadow-lg cursor-pointer`}
+                >
+                  <div className="w-9 h-9 rounded-xl bg-black/25 flex items-center justify-center text-[#E8B84B] group-hover:scale-110 transition-transform shrink-0">
+                    <Icon size={18} />
+                  </div>
+                  <span className="text-xs font-black uppercase tracking-wider text-white whitespace-nowrap">
+                    {cat.label}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+          <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-[#0F172A] to-transparent pointer-events-none hidden sm:block z-10" />
         </div>
       </div>
 
-      {/* Tuteur IA Gemini Banner */}
-      {onOpenAiTutor && (
-        <div className={`mb-8 relative z-20 ${CONTENT_PADDING}`}>
-          <div className="bg-gradient-to-r from-[#183D73] via-[#102B52] to-[#0F172A] border border-[#E8B84B]/40 rounded-2xl md:rounded-3xl p-4 sm:p-5 md:p-6 shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-3.5 md:gap-4">
-            <div className="flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-[#E8B84B] flex items-center justify-center text-[#0F172A] shadow-lg shrink-0">
-                <Sparkles size={22} className="animate-pulse" />
-              </div>
-              <div className="space-y-0.5 md:space-y-1">
-                <div className="flex items-center gap-2">
-                  <h3 className="text-xs sm:text-sm md:text-base font-black uppercase tracking-tight text-white">
-                    Tuteur IA Pédagogique Academy Lona
-                  </h3>
-                  <span className="text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
-                    Actif 24/7
-                  </span>
-                </div>
-                <p className="text-[11px] sm:text-xs text-gray-200 max-w-2xl leading-relaxed">
-                  Besoin d'aide pour réviser un module EXCELLENTIA, une question de santé ou votre plan d'entreprise ? Votre tuteur intelligent répond en temps réel.
-                </p>
-              </div>
-            </div>
-
-            <button
-              onClick={onOpenAiTutor}
-              className="w-full sm:w-auto px-5 py-2.5 md:py-3 bg-gradient-to-r from-[#E8B84B] to-[#D4A338] hover:from-[#FCE082] hover:to-[#E8B84B] text-[#0F172A] rounded-xl font-black text-xs uppercase tracking-wider transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer shrink-0 hover:scale-[1.02] active:scale-95"
-            >
-              <span>Consulter le Tuteur IA</span>
-              <ArrowRight size={14} className="stroke-[3]" />
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Content Rows for strategic axes and all platform categories */}
+      {/* Content Rows for all categories */}
       <div className="space-y-4">
         <SectionRow title="Programme EXCELLENTIA & STEM" category={Category.Excellentia} />
-        <SectionRow title="Santé & Prévention (Drépanocytose & Maternité)" category={Category.Sante} />
+        <SectionRow title="Santé & Prévention Médicale" category={Category.Sante} />
         <SectionRow title="Autonomisation des Femmes & Entrepreneuriat" category={Category.Autonomisation} />
         <SectionRow title="Éducation Civique & Droits Humains" category={Category.DroitsHumains} />
-        <SectionRow title="Educação & Metodologias Inovadoras" category={Category.Educacao} />
-        <SectionRow title="Tecnologia & Desenvolvimento Web" category={Category.Tecnologia} />
-        <SectionRow title="Sustentabilidade & Meio Ambiente" category={Category.Sustentabilidade} />
-        <SectionRow title="Gestão & Negócios Ágeis" category={Category.Gestao} />
-        <SectionRow title="Idiomas & Comunicação Global" category={Category.Idiomas} />
-        <SectionRow title="Alimentos & Bebidas" category={Category.Alimentos} />
-        <SectionRow title="Preparatório ENEM" category={Category.ENEM} />
-        <SectionRow title="EJA - Educação de Jovens e Adultos" category={Category.EJA} />
+        <SectionRow title="Éducation & Qualification Professionnelle" category={Category.Educacao} />
+        <SectionRow title="Technologie & Innovation Digitale" category={Category.Tecnologia} />
+        <SectionRow title="Environnement & Développement Durable" category={Category.Sustentabilidade} />
+        <SectionRow title="Gestion, Management & Entrepreneuriat" category={Category.Gestao} />
+        <SectionRow title="Langues & Communication Internationale" category={Category.Idiomas} />
+        <SectionRow title="Agroalimentaire & Production Locale" category={Category.Alimentos} />
+        <SectionRow title="Préparation aux Examens d'État (EXETAT)" category={Category.ENEM} />
+        <SectionRow title="Éducation des Adultes & Insertion" category={Category.EJA} />
       </div>
 
       <style>{`

@@ -31,17 +31,17 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#122C34] text-white px-6 md:px-16 pt-12 md:pt-16 pb-24 animate-in fade-in duration-500">
+    <div className="min-h-screen bg-[#0F172A] text-white px-6 md:px-16 pt-12 md:pt-16 pb-24 animate-in fade-in duration-500">
       
       {/* Search Header */}
       <div className="max-w-4xl mx-auto mb-12">
         <div className="relative group">
-          <div className="absolute inset-0 bg-[#0A7A94]/20 blur-xl rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500" />
-          <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#0E98A8] transition-colors" size={24} />
+          <div className="absolute inset-0 bg-[#183D73]/30 blur-xl rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity duration-500" />
+          <Search className="absolute left-6 top-1/2 -translate-y-1/2 text-gray-400 group-focus-within:text-[#E8B84B] transition-colors" size={24} />
           <input 
             type="text" 
             placeholder="Que souhaitez-vous apprendre aujourd'hui ?"
-            className="w-full bg-[#1A2B32] text-white py-4 md:py-5 pl-16 pr-14 rounded-2xl font-medium placeholder-gray-400 outline-none border border-[#0A7A94]/30 focus:border-[#0E98A8] transition-all text-base md:text-lg shadow-xl relative z-10"
+            className="w-full bg-[#1E293B] text-white py-4 md:py-5 pl-16 pr-14 rounded-2xl font-medium placeholder-gray-400 outline-none border border-white/15 focus:border-[#E8B84B] transition-all text-base md:text-lg shadow-xl relative z-10"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             autoFocus
@@ -63,14 +63,14 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <section>
               <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                <History size={16} className="text-[#0E98A8]" /> Recherches Fréquentes
+                <History size={16} className="text-[#E8B84B]" /> Recherches Fréquentes
               </h2>
               <div className="flex flex-wrap gap-2.5">
-                {['durabilité', 'leadership', 'python', 'anglais', 'gestion', 'finance', 'agroalimentaire'].map(tag => (
+                {['excellentia', 'santé', 'leadership', 'python', 'anglais', 'gestion', 'agriculture', 'drépanocytose'].map(tag => (
                   <button 
                     key={tag} 
                     onClick={() => setQuery(tag)}
-                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-gray-300 hover:bg-[#0A7A94]/20 hover:border-[#0A7A94]/40 hover:text-white transition-all cursor-pointer capitalize"
+                    className="px-4 py-2 bg-white/5 border border-white/10 rounded-xl text-xs font-bold text-gray-300 hover:bg-[#183D73] hover:border-[#E8B84B]/40 hover:text-[#E8B84B] transition-all cursor-pointer capitalize"
                   >
                     {tag}
                   </button>
@@ -80,16 +80,16 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
 
             <section>
               <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4 flex items-center gap-2">
-                <TrendingUp size={16} className="text-[#F26522]" /> Tendances en RDC
+                <TrendingUp size={16} className="text-[#E8B84B]" /> Tendances en RDC
               </h2>
               <div className="space-y-2">
                 {trending.map((item, idx) => (
                   <button 
                     key={idx} 
                     onClick={() => setQuery(item)}
-                    className="w-full flex items-center gap-4 py-2.5 px-4 rounded-xl hover:bg-white/5 transition-all group text-left cursor-pointer border border-transparent hover:border-white/10"
+                    className="w-full flex items-center gap-4 py-2.5 px-4 rounded-xl hover:bg-[#183D73]/40 transition-all group text-left cursor-pointer border border-transparent hover:border-[#E8B84B]/20"
                   >
-                    <span className="text-xl font-black text-gray-500 group-hover:text-[#F26522] transition-colors italic">#{idx + 1}</span>
+                    <span className="text-xl font-black text-gray-500 group-hover:text-[#E8B84B] transition-colors italic">#{idx + 1}</span>
                     <span className="text-sm font-semibold text-gray-200 group-hover:text-white">{item}</span>
                   </button>
                 ))}
@@ -104,10 +104,10 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
                 <div 
                   key={cat} 
                   onClick={() => setQuery(cat)}
-                  className="aspect-video relative rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-[#0E98A8] transition-all shadow-md bg-[#1A2B32]"
+                  className="aspect-video relative rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-[#E8B84B] transition-all shadow-md bg-[#1E293B]"
                 >
                   <img src={`https://images.unsplash.com/photo-${1500000000000 + (idx * 137452) % 99999999}?q=80&w=400&auto=format&fit=crop`} alt={cat} className="w-full h-full object-cover opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-500" onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#122C34] via-[#122C34]/40 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent" />
                   <span className="absolute bottom-3 left-3 right-3 text-xs font-bold uppercase tracking-wider text-white leading-tight">{cat}</span>
                 </div>
               ))}
@@ -130,14 +130,14 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center py-28 text-center">
-              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-4 text-[#0E98A8]">
+              <div className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center mb-4 text-[#E8B84B]">
                 <Search size={28} />
               </div>
               <p className="text-lg font-bold text-white mb-1">Aucun résultat trouvé</p>
               <p className="text-xs text-gray-400 max-w-sm">Essayez des termes plus généraux ou explorez les catégories thématiques.</p>
               <button 
                 onClick={() => setQuery('')}
-                className="mt-6 text-[#0E98A8] font-bold text-xs uppercase tracking-wider hover:text-white border border-[#0A7A94]/40 px-5 py-2.5 rounded-xl hover:bg-[#0A7A94]/20 transition-all cursor-pointer"
+                className="mt-6 text-[#E8B84B] font-bold text-xs uppercase tracking-wider hover:text-white border border-[#E8B84B]/40 px-5 py-2.5 rounded-xl hover:bg-[#183D73] transition-all cursor-pointer"
               >
                 Effacer la recherche
               </button>
