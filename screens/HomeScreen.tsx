@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { COURSES } from '../constants';
 import { Category } from '../types';
 import CourseCard from '../components/CourseCard';
+import { Logo } from '../components/Logo';
 import { GraduationCap, HeartPulse, Sparkles, Scale, Play, ArrowRight, Star, BookOpen, Terminal, Leaf, Briefcase, Globe, Utensils, Award, Users } from 'lucide-react';
 
 interface HomeScreenProps {
@@ -100,37 +101,37 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
     touchStartX.current = null;
   };
 
-  const CONTENT_PADDING = "px-4 sm:px-6 md:px-10";
+  const CONTENT_PADDING = "px-3.5 sm:px-5 md:px-8 lg:px-10";
 
   const SectionRow = ({ title, category }: { title: string, category: Category }) => {
     const courses = COURSES.filter(c => c.category === category);
     if (courses.length === 0) return null;
 
     return (
-      <section className="group/section animate-in fade-in slide-in-from-bottom-4 duration-700 mb-6 md:mb-8">
-        <div className={`flex items-center justify-between mb-3 ${CONTENT_PADDING}`}>
-          <h2 className="text-xs sm:text-sm md:text-base font-black text-white uppercase tracking-wider flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-[#E8B84B]" />
+      <section className="group/section animate-in fade-in slide-in-from-bottom-4 duration-700 mb-5 sm:mb-6 md:mb-7">
+        <div className={`flex items-center justify-between mb-2 sm:mb-2.5 ${CONTENT_PADDING}`}>
+          <h2 className="text-[11px] sm:text-xs md:text-sm lg:text-base font-black text-white uppercase tracking-wider flex items-center gap-1.5 sm:gap-2">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#E8B84B]" />
             {title}
           </h2>
           <button 
             onClick={() => onCategoryClick(category)}
-            className="text-[11px] font-bold text-[#E8B84B] hover:underline uppercase tracking-wider flex items-center gap-1"
+            className="text-[10px] sm:text-[11px] font-bold text-[#E8B84B] hover:underline uppercase tracking-wider flex items-center gap-1"
           >
             <span>Voir tout</span>
-            <ArrowRight size={12} />
+            <ArrowRight size={11} className="sm:w-3 sm:h-3" />
           </button>
         </div>
         <div className="relative">
-          <div className={`flex gap-3 md:gap-4 overflow-x-auto hide-scrollbar py-2 ${CONTENT_PADDING} scroll-smooth items-start`}>
+          <div className={`flex gap-2.5 sm:gap-3 md:gap-3.5 overflow-x-auto hide-scrollbar py-1.5 ${CONTENT_PADDING} scroll-smooth items-start`}>
             {courses.map(course => (
-              <div key={course.id} className="w-38 sm:w-48 md:w-60 lg:w-64 flex-shrink-0">
+              <div key={course.id} className="w-[138px] sm:w-[160px] md:w-[185px] lg:w-[215px] xl:w-[235px] flex-shrink-0">
                 <CourseCard course={course} onClick={onCourseClick} />
               </div>
             ))}
-            <div className="w-4 flex-shrink-0" />
+            <div className="w-3 flex-shrink-0" />
           </div>
-          <div className="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-[#0F172A] to-transparent pointer-events-none hidden md:block z-20" />
+          <div className="absolute top-0 right-0 h-full w-12 md:w-16 bg-gradient-to-l from-[#0F172A] to-transparent pointer-events-none hidden md:block z-10" />
         </div>
       </section>
     );
@@ -140,6 +141,11 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
 
   return (
     <div className="text-white pb-24 md:pb-16 select-none animate-in fade-in duration-500 overflow-x-hidden bg-[#0F172A]">
+      {/* Mobile Top Header */}
+      <div className="md:hidden flex items-center justify-between px-4 py-2.5 bg-[#0F172A]/90 backdrop-blur-md sticky top-0 z-40 border-b border-[#183D73]/40">
+        <Logo inverted className="h-7" />
+        <div className="w-2 h-2 rounded-full bg-[#E8B84B] animate-pulse" />
+      </div>
       
       {/* Hero Banner Carousel (Disney+ Style) */}
       <div 
@@ -209,27 +215,27 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
       </div>
 
       {/* Categories Row (Horizontal scroll without scrollbars) */}
-      <div className={`mb-8 relative z-20 ${CONTENT_PADDING}`}>
-        <div className="flex items-center justify-between mb-3">
-          <h3 className="text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-2">
-            <Star size={14} className="text-[#E8B84B] fill-[#E8B84B]" />
+      <div className={`mb-6 sm:mb-8 relative z-20 ${CONTENT_PADDING}`}>
+        <div className="flex items-center justify-between mb-2.5">
+          <h3 className="text-[11px] sm:text-xs font-bold text-gray-300 uppercase tracking-wider flex items-center gap-1.5 sm:gap-2">
+            <Star size={13} className="text-[#E8B84B] fill-[#E8B84B]" />
             <span>Catégories & Domaines d'Apprentissage</span>
           </h3>
         </div>
         <div className="relative">
-          <div className="flex items-center gap-3 overflow-x-auto hide-scrollbar py-2 scroll-smooth">
+          <div className="flex items-center gap-2 sm:gap-3 overflow-x-auto hide-scrollbar py-1.5 scroll-smooth">
             {categories.map((cat) => {
               const Icon = cat.icon;
               return (
                 <button 
                   key={cat.id}
                   onClick={() => onCategoryClick(cat.id)}
-                  className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-2xl bg-gradient-to-r ${cat.color} border border-white/15 hover:border-[#E8B84B] hover:scale-[1.03] active:scale-95 transition-all duration-200 group shadow-lg cursor-pointer`}
+                  className={`flex-shrink-0 flex items-center gap-2 sm:gap-2.5 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl sm:rounded-2xl bg-gradient-to-r ${cat.color} border border-white/15 hover:border-[#E8B84B] hover:scale-[1.02] active:scale-95 transition-all duration-200 group shadow-md cursor-pointer`}
                 >
-                  <div className="w-9 h-9 rounded-xl bg-black/25 flex items-center justify-center text-[#E8B84B] group-hover:scale-110 transition-transform shrink-0">
-                    <Icon size={18} />
+                  <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-black/25 flex items-center justify-center text-[#E8B84B] group-hover:scale-105 transition-transform shrink-0">
+                    <Icon size={15} className="sm:w-4 sm:h-4" />
                   </div>
-                  <span className="text-xs font-black uppercase tracking-wider text-white whitespace-nowrap">
+                  <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white whitespace-nowrap">
                     {cat.label}
                   </span>
                 </button>

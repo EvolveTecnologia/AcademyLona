@@ -17,7 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab, onLo
 
   if (isMobile) {
     return (
-      <div className="min-h-screen bg-[#122C34] text-white pb-20">
+      <div className="min-h-screen bg-[#0F172A] text-white pb-20">
         {children}
         <BottomNav activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
@@ -26,12 +26,12 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab, onLo
 
   // Desktop/TV Layout
   return (
-    <div className="min-h-screen bg-[#122C34] text-white flex overflow-hidden">
+    <div className="min-h-screen bg-[#0F172A] text-white flex overflow-hidden">
       {/* Sidebar Fixed to Left */}
       <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} onLogout={onLogout} />
       
       {/* Main Content - pl-[100px] to match collapsed sidebar width */}
-      <main className="flex-1 md:pl-[100px] transition-all duration-300 w-full relative z-0 overflow-y-auto h-screen hide-scrollbar">
+      <main className="flex-1 md:pl-[100px] transition-all duration-300 w-full relative z-0 overflow-y-auto h-screen hide-scrollbar bg-[#0F172A]">
         {children}
       </main>
     </div>
