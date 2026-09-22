@@ -110,8 +110,17 @@ const CourseDetails: React.FC<CourseDetailsProps> = ({
       </div>
 
       {/* Hero Banner Area */}
-      <div className="relative w-full h-[45vh] md:h-[60vh] overflow-hidden">
-        <img src={course.heroImage} className="w-full h-full object-cover" alt="" />
+      <div className="relative w-full h-[45vh] md:h-[60vh] overflow-hidden bg-[#1E293B]">
+        <img 
+          src={course.heroImage || course.thumbnail || 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop'} 
+          className="w-full h-full object-cover" 
+          alt={course.title}
+          referrerPolicy="no-referrer"
+          onError={(e) => {
+            const target = e.currentTarget;
+            target.src = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop';
+          }}
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/60 to-transparent" />
       </div>
 

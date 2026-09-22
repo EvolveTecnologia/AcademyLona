@@ -239,6 +239,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onEnter }) => {
                   src="https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=1200&auto=format&fit=crop" 
                   alt="Extrait de cours Academy Lona" 
                   className="w-full h-full object-cover filter brightness-[0.85]"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
 

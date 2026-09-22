@@ -159,6 +159,7 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ onCourseClick, onCategoryClick,
               src={slide.image} 
               alt={slide.title}
               className="w-full h-full object-cover animate-ken-burns filter brightness-75"
+              referrerPolicy="no-referrer"
             />
             {/* Gradients */}
             <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A] via-[#0F172A]/70 to-transparent" />

@@ -8,6 +8,23 @@ interface SearchScreenProps {
   onCourseClick: (id: string) => void;
 }
 
+const CATEGORY_IMAGES: Record<string, string> = {
+  [Category.Excellentia]: 'https://images.unsplash.com/photo-1509228468518-180dd4864904?q=80&w=600&auto=format&fit=crop',
+  [Category.Sante]: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop',
+  [Category.Autonomisation]: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
+  [Category.DroitsHumains]: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600&auto=format&fit=crop',
+  [Category.Educacao]: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=600&auto=format&fit=crop',
+  [Category.Tecnologia]: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop',
+  [Category.Sustentabilidade]: 'https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=600&auto=format&fit=crop',
+  [Category.Gestao]: 'https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600&auto=format&fit=crop',
+  [Category.Idiomas]: 'https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=600&auto=format&fit=crop',
+  [Category.Alimentos]: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=600&auto=format&fit=crop',
+  [Category.ENEM]: 'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?q=80&w=600&auto=format&fit=crop',
+  [Category.EJA]: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=600&auto=format&fit=crop',
+};
+
+const DEFAULT_CATEGORY_IMAGE = 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop';
+
 const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
   const [query, setQuery] = useState('');
   
@@ -100,13 +117,24 @@ const SearchScreen: React.FC<SearchScreenProps> = ({ onCourseClick }) => {
           <section>
             <h2 className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-4">Explorer par Catégorie</h2>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {categories.map((cat, idx) => (
+              {categories.map((cat) => (
                 <div 
                   key={cat} 
                   onClick={() => setQuery(cat)}
                   className="aspect-video relative rounded-2xl overflow-hidden group cursor-pointer border border-white/10 hover:border-[#E8B84B] transition-all shadow-md bg-[#1E293B]"
                 >
-                  <img src={`https://images.unsplash.com/photo-${1500000000000 + (idx * 137452) % 99999999}?q=80&w=400&auto=format&fit=crop`} alt={cat} className="w-full h-full object-cover opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-500" onError={(e) => { (e.target as HTMLElement).style.display = 'none'; }} />
+                  <img 
+                    src={CATEGORY_IMAGES[cat] || DEFAULT_CATEGORY_IMAGE} 
+                    alt={cat} 
+                    className="w-full h-full object-cover opacity-40 group-hover:scale-105 group-hover:opacity-60 transition-all duration-500" 
+                    referrerPolicy="no-referrer"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src !== DEFAULT_CATEGORY_IMAGE) {
+                        target.src = DEFAULT_CATEGORY_IMAGE;
+                      }
+                    }}
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent" />
                   <span className="absolute bottom-3 left-3 right-3 text-xs font-bold uppercase tracking-wider text-white leading-tight">{cat}</span>
                 </div>
